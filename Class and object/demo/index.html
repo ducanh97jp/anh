@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="add()">Cộng</button>
+    <button onclick="sub()">Trừ</button>
+    <button onclick="mul()">Nhân</button>
+    <button onclick="div()">Chia</button>
+    <button onclick="reset()">Reset</button>
+    <p id="result"></p>
+
+</body>
+
+</html>
+<script>
+    class Calculator {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+        read() {
+            let x = +prompt("Enter the x: ");
+            let y = +prompt("Enter the y: ");
+            this.x = x;
+            this.y = y;
+        }
+        add() {
+            return this.x + this.y;
+        }
+        sub() {
+            return this.x - this.y;
+        }
+        mul() {
+            return this.x * this.y;
+        }
+        div() {
+            return this.x / this.y;
+        }
+        reset() {
+            let x = +prompt("Enter the x: ");
+            let y = +prompt("Enter the y: ");
+            this.x = x;
+            this.y = y;
+        }
+    }
+    let calculator = new Calculator();
+    calculator.read();
+    let result = document.getElementById("result");
+    function add() {
+        let a = "Tong cua 2 so la " + calculator.add();
+        result.innerHTML = a;
+    }
+    function sub() {
+        let a = "Hieu cua 2 so la " + calculator.sub();
+        result.innerHTML = a;
+    }
+    function mul() {
+        let a = "Tich cua 2 so la " + calculator.mul();
+        result.innerHTML = a;
+    }
+    function div() {
+        let a = "thuong cua 2 so laf " + calculator.div();
+        result.innerHTML = a;
+    }
+    function reset() {
+        calculator.reset();
+    }
+    
+</script>

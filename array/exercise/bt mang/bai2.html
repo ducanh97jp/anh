@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let number = prompt("Enter the numbers: ");
+    let a = parseFloat(number);
+    let b;
+    let array = [];
+    if (number.indexOf(0) == 0) {
+        array[0] = 0;
+        for (let i = 1; a != 0; i++) {
+            b = a % 10;
+            a = Math.floor(a / 10);
+            array[i] = b;
+        }
+    } else {
+        for (let i = 0; a != 0; i++) {
+            b = a % 10;
+            a = Math.floor(a / 10);
+            array[i] = b;
+        }
+    }
+    array.reverse();
+    debugger;
+    for ( let i = 0;i<array.length;i++) {
+        if (array[i] % 2 == 0 && array[i+1] % 2 == 0) {
+            document.write(array[i] + '-');
+        }else {
+            document.write(array[i]);
+        }
+    }
+</script>

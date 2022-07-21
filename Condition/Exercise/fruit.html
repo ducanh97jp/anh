@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hoa quả</title>
+</head>
+<body>
+   
+        <select name="fruit" id="fruit">
+            <option value="Ổi">Ổi</option>
+            <option value="Dưa hấu">Dưa hấu</option>
+            <option value="Táo">Táo</option>
+            <option value="Xoài">Xoài</option>
+            <option value="Cam">Cam</option>
+            <option value="Chôm chôm">Chôm chôm</option>
+            <option value="Măng cụt">Măng cụt</option>
+        </select>
+        <button id="price" onclick="check()">Xem giá</button>
+        <h4 id="money"></h4>
+   
+</body>
+</html>
+<script>
+    
+    function check() {
+        let fruit = document.getElementById("fruit").value;
+        console.log(fruit);
+        switch (fruit)
+        {
+            case 'Ổi':
+            case 'Dưa hấu':
+                document.getElementById("money").innerHTML='20000 VNĐ/kg';
+                break;
+            case 'Táo':
+            case 'Xoài':
+                document.getElementById("money").innerHTML='30000 VNĐ/kg';
+                break;
+            case 'Cam':
+            case 'Chôm chôm':
+                document.getElementById("money").innerHTML='40000 VNĐ/kg';
+                break;
+            case 'Măng cụt':
+                document.getElementById("money").innerHTML='50000 VNĐ/kg';
+                break;
+        }
+    }
+</script>

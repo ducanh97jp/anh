@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 sôs nguyên tố đầu tiên</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let x = prompt('Số số nguyên tố cần: ');
+    let number = 0;
+    let prime;
+    let a;
+    let b = 0;
+    for (let i = 1;number<= x;i++) { 
+        if (i==1) {
+            prime = 1;
+            number +=1;
+            document.write(prime + ',');
+            continue;
+        }
+        for (let j = 1;j<=i;j++) {
+            a = i%j;
+            if (a == 0) {
+                b +=1;
+            }
+            if (b==2 && j==i) {
+                number += 1;
+                prime = i;
+                document.write(prime + ',');
+            }
+        }
+        b = 0;
+       
+    }
+    
+   
+   
+</script>

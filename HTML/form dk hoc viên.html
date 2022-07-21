@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table {
+            text-align: left;
+            background-color: khaki;
+            width:50%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form dk học viên</title>
+</head>
+<body>
+    
+    <table>
+        
+        <form>
+            <tr>
+                <td colspan="3" style="background-color: aquamarine; color:blue;">ĐĂNG KÝ HỌC VIÊN</style=></td>
+            
+            <tr>
+                <td>Họ và tên</td>
+                <td colspan="2"><input type="text" style="width: 200px;"></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh</td>
+                <td><input type="datetime" style="width: 100px;" ></td>
+                
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <label><input type="radio" name="sex" value="Nam">Nam</label>
+                    <label><input type="radio" name="sex" value="Nữ">Nữ</label>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td colspan="2"><input type="text" style="height: 50px; width: 170px;;"></td>
+                
+            </tr>
+            <tr>
+                <td>Lớp</td>
+                <td>
+                    <select>
+                        <option>-chọn lớp-</option>
+                        <option>lớp A</option>
+                        <option>lớp B</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td colspan="2" style="width: 120px;"><input type="email"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td colspan="2" style="width: 120px;"><input type="number"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    <input type="submit" value="Đăng ký">
+                    <input type="reset" value="Nhập lại">
+                </td>
+                
+            </tr>
+        </form>
+    </table>
+
+</body>
+</html>

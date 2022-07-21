@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let i = 1;
+    let a = '<table border="1" cellspacing="0">';
+    let b;
+    do {
+        a += '<tr>';
+        if (i % 3 ==0) {
+            if (i % 5 == 0) {
+                b = "FizzBuzz";
+            } else {
+                b = "Fizz";
+            }
+        } else if (i % 5 == 0) {
+            b = "Buzz";
+        } else {
+            b = i;
+        }
+        a += '<td>' + b + '</td>';
+        i++;
+        a+= '</tr>';
+    } while ( i<100);
+    a += '</table>';
+    document.write(a);
+</script>

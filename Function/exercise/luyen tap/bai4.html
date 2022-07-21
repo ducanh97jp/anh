@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    const calculatePerimeter = (number) => {
+        return 2 * number * Math.PI;
+    }
+    const calculateArea = (number) => {
+        return number * number * Math.PI;
+    }
+    let r = +prompt("Nhap ban kinh hinh tron ");
+    let perimeter = calculatePerimeter(r);
+    let area = calculateArea(r);
+    document.write("Chu vi cua hinh tron la: " + perimeter + "<br>");
+    document.write("Dien tich cua hinh tron la: " + area);
+</script>

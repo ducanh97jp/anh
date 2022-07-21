@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    const check = (arr, a) => {
+        let b = 0;
+        for (element of arr) {
+            if (element == a) {
+                b++;
+            }
+        }
+        if (b != 0) {
+            return b;
+        } else {
+            return -1;
+        }
+
+    }
+    let array = [];
+    for (let i = 0; i < 10; i++) {
+        array[i] = prompt("Nhap ky tu cho mang: ");
+    }
+    let text = prompt("Nhap ky tu can tim: ");
+    let c = check(array, text);
+    console.log(array);
+    console.log(text);
+    document.write("Ky tu " + text + " xuat hien " + c + " lan");
+</script>

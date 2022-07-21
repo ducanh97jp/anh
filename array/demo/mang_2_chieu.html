@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // Khoi tao mang cach 1
+    let city = [
+        ["Ha Noi", "Sai Gon", "Da Nang"],
+        ["New York", "California", "Miami"],
+        ["Tokyo", "Nagoya", "Osaka"]
+    ];
+    document.write(city + "<br>");
+    //Khoi tao mang cach 2
+    let city2 = new Array(3);
+    for (let i = 0; i < 3; i++) {
+        city2[i] = new Array(3);
+    }
+    city2[0][0] = "Hanoi";
+    city2[0][1] = "Saigon";
+    city2[0][2] = "DaNang";
+    city2[1][0] = "New York";
+    city2[1][1] = "California";
+    city2[1][2] = "Miami";
+    city2[2][0] = "Tokyo";
+    city2[2][1] = "Nagoya";
+    city2[2][2] = "Osaka";
+    document.write(city2 + "<br>");
+    for (let i = 0; i < city.length; i++) {
+        for (let j = 0; j < city[i].length; j++) {
+            document.write(city[i][j] + '<br>');
+        }
+    }
+</script>

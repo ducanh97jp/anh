@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let array =  [1, 5, 6, 100, 7, 9, 1123, 6,8,24,789];
+    let a = parseFloat(prompt("Nhap so nguyen duong: "));
+    if (a < 0) {
+        alert("So khong hop le!");
+        return;
+    } else if( a > array.length) {
+        alert(" so lon hon do dai mang!");
+        return;
+    } else {
+        // for ( let i = 0;i<=a;i++) {
+        //     document.write(array[i]);
+        // }
+        let b = array.slice(0,a);
+        document.write(b);
+    }
+</script>

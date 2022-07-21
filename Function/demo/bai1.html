@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr = [1, "Hello", 6, -100, 7, -9, "world!", 6 ,8, -24, 789];
+    let arr1 = [];
+    let arr2 = [];
+    let arr3 = [];
+    for (a of arr) {
+        if (a<0) {
+            arr1.push(a);
+        } else if (a>0) {
+            arr2.push(a);
+        } else {
+            arr3.push(a);
+        }
+    }
+    document.write("arr1: " + arr1 + "<br>");
+    document.write("arr2: " + arr2 + "<br>");
+    document.write("arr3: " + arr3.join(" "));
+</script>

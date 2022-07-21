@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        p {
+            text-align: center;
+            background-color: tomato;
+            color:aliceblue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khoá biểu</title>
+</head>
+<body>
+    <p>>Tạo thời khoá biểu</p>
+    <table>
+        <form action="">
+            <tr>
+                <td>Lớp</td>
+                <td><input type="text" value="12A"></td>
+                <td>Thời gian học</td>
+                <td>
+                    <select name="time">
+                        <option value="1h">1h-2h</option>
+                        <option value="2h">2h-3h</option>
+                        <option value="3h">3h-4h</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Giáo viên</td>
+                <td><input type="text" value="Nguyễn Văn A"></td>
+                <td>Ngày học</td>
+                <td>   
+                     <laber><input type="radio" name="day" value="thú" checked>thứ2, 4, 6</laber>
+                     <laber><input type="radio" name="day" value="thú3">thứ3, 5, 7</laber>
+                </td>
+            </tr>
+            <tr>
+                <td>Phòng học</td>
+                <td>
+                    <select name="room">
+                        <option value="A1">A1</option>
+                        <option value="A2">A2</option>
+                        <option value="A3">A3</option>
+                    </select>
+                </td>
+                <td>Mật khẩu phòng</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Tạo">
+                    <input type="reset" value="Huỷ">
+                </td>
+            </tr>
+                    
+        </form>
+    </table>
+    <table border="1" style="width: 100%;">
+        <tr>
+            <th colspan="3"></th>
+            <th>Thứ 3</th>
+            <th>Thứ 5</th>
+            <th>Thứ 7</th>
+        </tr>
+        <tr>
+            <th>Tuần</th>
+            <th>Ngày bắt đầu</th>
+            <th>Ngày kết thúc</th>
+            <th colspan="3">Môn học</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td><input type="date" ></td>
+            <td><input type="date" ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td><input type="date" ></td>
+            <td><input type="date"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td><input type="date" ></td>
+            <td><input type="date" "></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

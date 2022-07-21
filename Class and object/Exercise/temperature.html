@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class Temperature {
+        constructor(c) {
+            this.c = c;
+        }
+        convertFahrenheit() {
+            return 32 + 5 / 9 * this.c;
+        }
+        convertKenvin() {
+            return this.c + 273.15;
+        }
+    }
+    let celcius = +prompt("Enter the celcius: ");
+    let temperature = new Temperature(celcius);
+    document.write("Fahrrenheit: " + temperature.convertFahrenheit() + "F<br>");
+    document.write("Kenvin : " + temperature.convertKenvin() + "K");
+
+
+</script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        tr,p {
+            font-size: 20px;
+        }
+        p {
+            color: crimson;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinh-diem</title>
+</head>
+<body>
+    <table>
+        <form >
+            <h2>Tính điểm ĐH khối D</h2>
+            <tr>
+                <td>Môn Toán</td>
+                <td ><input id="mathScore" type="number" style="width: 70px";></td>
+            </tr>
+            <tr>
+                <td>Môn Văn</td>
+                <td><input id="literatureScore" type="number" style="width: 70px";></td>
+            </tr>
+            <tr>
+                <td>Môn Anh</td>
+                <td><input id="englishScore" type="number" style="width: 70px";></td>
+            </tr>
+            <tr>
+                <td>Khu vực</td>
+                <td>
+                    <select name="khu-vuc" id="add">
+                        <option value="KV1">KV1</option>
+                        <option value="KV2">KV2</option>
+                        <option value="KV2-NT">KV2-NT</option>
+                        <option value="KV3">KV3</option>
+                    </select>
+                </td>
+            </tr>
+        </form>
+    </table>
+    <br>
+    <button onclick="score()">Tính điểm</button><br>
+    <p id="sum"></p>
+</body>
+</html>
+<script>
+    function score() {
+        let mathScore = +document.getElementById("mathScore").value;
+        let literatureScore = +document.getElementById("literatureScore").value;
+        let englishScore = +document.getElementById("englishScore").value;
+        let add = document.getElementById("add").value;
+        switch (add) {
+            case 'KV1':
+                add = 0.75;
+                break;
+            case 'KV2':
+                add = 0.5;
+                break;
+            case 'KV2-NT':
+                add = 0.25;
+                break;
+            case 'KV3':
+                add =0;
+                break;
+        }
+        let sum = mathScore + literatureScore + englishScore + add;
+        document.getElementById("sum").innerHTML= 'Tổng điểm ĐH khối D của bạn là: ' + sum;
+    }
+</script>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table {
+            text-align: center;
+            width: 100%;
+        }
+        select {
+            width: 120px;
+        }
+        p {
+            color: cornflowerblue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>money</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input id="money" type="text"></td>
+            <td>
+                <select name="country" id="country">
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="China">China</option> 
+                    <option value="America">America</option>
+                    <option value="Japan">Japan</option>
+                    <option value="England">England</option>
+                </select>
+            </td>
+            <td>
+                <select name="unit" id="unit">
+                    <option value="VNĐ">VNĐ</option>
+                    <option value="CNY">CNY</option>
+                    <option value="USD">USD</option>
+                    <option value="JPY">JPY</option>
+                    <option value="GBP">GBP</option>
+                </select>
+            </td>
+            <td><button onclick="check()">Convert</button></td>
+        </tr>
+    </table>
+    <p id="result"></p>
+</body>
+</html>
+<script>
+    
+    function check() {
+        let money = parseFloat(document.getElementById("money").value);
+        let country = document.getElementById("country").value;
+        let unit = document.getElementById("unit").value;
+        let result;
+        switch (country) {
+            case 'Vietnam':
+                switch (unit) {
+                    case 'VNĐ':
+                        result = money;
+                        break;
+                    case 'CNY':
+                        result= money*3470.35;
+                        break;
+                    case 'USD':
+                        result= money*23192;
+                        break;
+                    case 'JPY':
+                        result= money*172.96;
+                        break;
+                    case 'GBP':
+                        result= money*29126.83;
+                        break;
+                }
+                document.getElementById("result").innerHTML='Result:' +result+ 'VNĐ';
+                break;
+            case 'China':
+                switch (unit) {
+                    case 'VNĐ':
+                        result = money*0.00029;
+                        break;
+                    case 'CNY':
+                        result= money;
+                        break;
+                    case 'USD':
+                        result= money*6.68;
+                        break;
+                    case 'JPY':
+                        result= money*0.05;
+                        break;
+                    case 'GBP':
+                        result= money*8.39;
+                        break;
+                }
+                document.getElementById("result").innerHTML='Result:' +result+ 'CNY';
+                break;
+            case 'America':
+                switch (unit) {
+                    case 'VNĐ':
+                        result = money*0.000043;
+                        break;
+                    case 'CNY':
+                        result= money*0.15;
+                        break;
+                    case 'USD':
+                        result= money;
+                        break;
+                    case 'JPY':
+                        result= money*0.0075;
+                        break;
+                    case 'GBP':
+                        result= money*1.26;
+                        break;
+                }
+                document.getElementById("result").innerHTML='Result:' +result+ 'USD';
+                break;
+            case 'Japan':
+                switch (unit) {
+                    case 'VNĐ':
+                        result = money*0.0058;
+                        break;
+                    case 'CNY':
+                        result= money*20.06;
+                        break;
+                    case 'USD':
+                        result= money*134.09;
+                        break;
+                    case 'JPY':
+                        result= money;
+                        break;
+                    case 'GBP':
+                        result= money*168.42;
+                        break;
+                }
+                document.getElementById("result").innerHTML='Result:' +result+ 'JPY';
+                break;
+            case 'England':
+                switch (unit) {
+                    case 'VNĐ':
+                        result = money * 0.000034;
+                        break;
+                    case 'CNY':
+                        result= money*0.12;
+                        break;
+                    case 'USD':
+                        result= money*0.8;
+                        break;
+                    case 'JPY':
+                        result= money*0.0059;
+                        break;
+                    case 'GBP':
+                        result= money;
+                        break;
+                }
+                document.getElementById("result").innerHTML='Result:' + result+ 'GBP';
+                break;
+        }
+    }
+</script>

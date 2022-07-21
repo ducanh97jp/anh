@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            width: 30%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ca ro</title>
+</head>
+
+<body>
+    <h2>Caro Game Simple</h2>
+    <p id="array"></p>
+    <button onclick="change_value()">change Value</button>
+
+</body>
+
+</html>
+<script>
+    let d = document.getElementById("array");
+    let array = new Array(5);
+    for (let i = 0; i < 5; i++) {
+        array[i] = new Array(5);
+        for (let j = 0; j < array.length; j++) {
+            array[i][j] = 0;
+        }
+
+    }
+    for (let i = 0; i < array.length; i++) {
+        let caro = array[i].join(" ");
+        d.innerHTML += caro + "<br>";
+    }
+    function change_value() {
+        let x = prompt("vi tri cot: ");
+        let y = prompt("vi tri hang: ");
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (i == x && j == y) {
+                    array[i][j] = "x";
+                }
+            }
+        }
+        console.log(array);
+        d.innerHTML= '';
+        for (let i = 0; i < array.length; i++) {
+            let caro = array[i].join(" ");
+            d.innerHTML += caro + "<br>";
+        }
+    }
+
+</script>

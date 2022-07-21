@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuyen doi feet vaf meter</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Feet</th>
+            <th>Meter</th>
+        </tr>
+        <tr>
+            <td>
+                <input id="feet" type="number" value="" oninput="footToMeter(this.value)" onchange="footToMeter(this.value)">
+            </td>
+            <td>
+                <input id="meter" type="number" value="" oninput="meterToFoot(this.value)" onchange="meterToFoot(this.value)">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+    function footToMeter(foot) {
+        let meter = 0.305 * foot;
+        document.getElementById("meter").value = meter;
+    }
+    function meterToFoot(meter) {
+        let feet = 3.279 * meter;
+        document.getElementById("feet").value = feet;
+    }
+</script>

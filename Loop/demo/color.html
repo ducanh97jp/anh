@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style type="text/css">
+   div {
+     padding: 10px;
+     margin: 5px;
+   }
+ </style>
+</head>
+ 
+<body>
+ <div name="div">Thẻ thứ 1</div>
+ <div name="div">Thẻ thứ 2</div>
+ <div name="div">Thẻ thứ 3</div>
+ <div name="div">Thẻ thứ 4</div>
+ <div name="div">Thẻ thứ 5</div>
+ <div name="div">Thẻ thứ 6</div>
+ <div name="div">Thẻ thứ 7</div>
+ <div name="div">Thẻ thứ 8</div>
+ <div name="div">Thẻ thứ 9</div>
+ <div name="div">Thẻ thứ 10</div>
+ <button onclick="change_backgroud()">Change background</button>
+</body>
+ 
+</html>
+<script>
+    let di = document.getElementsByTagName("div");
+    console.log(di);
+    function change_backgroud() {
+        for (let i = 0;i<di.length;i++) {
+            if (i%2 ==0) {
+                di[i].style.background = 'blue';
+            } else {
+                di[i].style.background = 'red';
+            }
+        }
+    }
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    class SwitchButton {
+        constructor() {
+        }
+        connectToLamp() {
+            alert("den da ket noi");
+        }
+        switchOff() {
+            return electric.turnOff();
+
+        }
+        switchOn() {
+            return electric.turnOn();
+        }
+    }
+    class ElectricLam {
+        constructor() {
+        }
+        turnOff() {
+                alert("Bong den dang bat");
+        }
+        turnOn() {
+                alert("Bong den dang tat");
+        }
+    }
+    let switchButton = new SwitchButton();
+    let electric = new ElectricLam();
+    switchButton.connectToLamp();
+    switchButton.switchOn();
+    switchButton.switchOff();
+    switchButton.switchOn();
+    switchButton.switchOff();
+    switchButton.switchOn();
+    switchButton.switchOff();
+    switchButton.switchOn();
+    switchButton.switchOff();
+    switchButton.switchOn();
+    switchButton.switchOff();
+</script>

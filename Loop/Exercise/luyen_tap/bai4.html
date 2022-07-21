@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fibonacci</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let fibonacci = [1, 1];
+    let i = 2;
+    let a;
+    while (i>0) {
+        a = fibonacci[i - 1] + fibonacci[i - 2];
+        if (a % 5 === 0) {
+            document.write(' So dau tien trong day fibonacci chia het cho 5 la: ' + a);
+            break;
+        }
+        fibonacci.push(a);
+        i++;
+    } 
+</script>

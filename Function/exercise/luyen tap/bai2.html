@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+   
+    let array1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    const searchConstellation = (text) => {
+        for (let i = 0; i < array1.length; i++) {
+            if (array1[i] == text) {
+                document.write(text + "in the constellation " + array2[i]);
+            } else {
+                alertn(text + "isn't star");
+            }
+        }
+    }
+    let star = prompt("Enter star name: ");
+    searchConstellation(star);
+</script>

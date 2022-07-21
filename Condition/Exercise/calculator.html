@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        button {
+            width: 35px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><input style="width: 200px;" type="text" id="number" value=""></td>
+        </tr>
+        <tr>
+            <td><button onclick="number1()">1</button></td>
+            <td><button onclick="number2()">2</button></td>
+            <td><button onclick="number3()">3</button></td>
+            <td><button onclick="summation()">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="number4()">4</button></td>
+            <td><button onclick="number5()">5</button></td>
+            <td><button onclick="number6()">6</button></td>
+            <td><button onclick="subtraction()">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="number7()">7</button></td>
+            <td><button onclick="number8()">8</button></td>
+            <td><button onclick="number9()">9</button></td>
+            <td><button onclick="multiplication()">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="numberc()">C</button></td>
+            <td><button onclick="number10()">0</button></td>
+            <td><button onclick="result()">=</button></td>
+            <td><button onclick="division()">/</button></td>
+        </tr>
+        
+    </table>
+</body>
+</html>
+<script> 
+    function numberc() {
+        document.getElementById("number").value='';
+    }
+    function number1() {
+        document.getElementById("number").value+= 1;
+    }
+    function number2() {
+        document.getElementById("number").value+= 2;
+    }
+    function number3() {
+        document.getElementById("number").value+= 3;
+    }
+    function number4() {
+        document.getElementById("number").value+= 4;
+    }
+    function number5() {
+        document.getElementById("number").value+= 5;
+    }
+    function number6() {
+        document.getElementById("number").value+= 6;
+    }
+    function number7() {
+        document.getElementById("number").value+= 7;
+    }
+    function number8() {
+        document.getElementById("number").value+= 8;
+    }
+    function number9() {
+        document.getElementById("number").value+= 9;
+    }
+    function number10() {
+        document.getElementById("number").value+= 0;
+    }
+    function summation() {
+        document.getElementById("number").value+='+';
+    }
+    function subtraction() {
+        document.getElementById("number").value+='-';
+    }
+    function multiplication() {
+        document.getElementById("number").value+='*';
+    }
+    function division() {
+        document.getElementById("number").value+='/';
+    }
+    
+    function result() {
+        let phep_tinh = document.getElementById("number").value;
+        let summation = (phep_tinh.indexOf('+'));
+        let subtraction = (phep_tinh.indexOf('-'));
+        let multiplication = (phep_tinh.indexOf('*'));
+        let division = (phep_tinh.indexOf('/'));
+            if (summation !=-1) {
+            let phep_tinh1 = (phep_tinh.slice(0,summation));
+            phep_tinh1= parseFloat(phep_tinh1);
+            let phep_tinh2 = (phep_tinh.slice(summation+1));
+            phep_tinh2= parseFloat(phep_tinh2);
+            phep_tinh= parseFloat(phep_tinh);
+            phep_tinh = phep_tinh1 + phep_tinh2;
+        } else if (subtraction !=-1) {
+            let phep_tinh1 = (phep_tinh.slice(0,subtraction));
+            phep_tinh1= parseFloat(phep_tinh1);
+            let phep_tinh2 = (phep_tinh.slice(subtraction+1));
+            phep_tinh2= parseFloat(phep_tinh2);
+            phep_tinh= parseFloat(phep_tinh);
+            phep_tinh = phep_tinh1 - phep_tinh2;
+        } else if (multiplication !=-1){
+            let phep_tinh1 = (phep_tinh.slice(0,multiplication));
+            phep_tinh1= parseFloat(phep_tinh1);
+            let phep_tinh2 = (phep_tinh.slice(multiplication+1));
+            phep_tinh2= parseFloat(phep_tinh2);
+            phep_tinh= parseFloat(phep_tinh);
+            phep_tinh = phep_tinh1 * phep_tinh2;
+        } else if (division!=-1) {
+            let phep_tinh1 = (phep_tinh.slice(0,division));
+            phep_tinh1= parseFloat(phep_tinh1);
+            let phep_tinh2 = (phep_tinh.slice(division+1));
+            phep_tinh2= parseFloat(phep_tinh2);
+            phep_tinh= parseFloat(phep_tinh);
+            phep_tinh = phep_tinh1 / phep_tinh2;
+        } else {
+            phep_tinh= phep_tinh;
+        }
+        console.log(phep_tinh);
+        document.getElementById('number').value=phep_tinh;
+        
+    }
+    
+</script>

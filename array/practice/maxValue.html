@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>max value</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let array = [1, 5, 367, 384, 34, 58, 298];
+    let results = 0;
+    // let array = [];
+    // let a = parseFloat(prompt('Nhap cac gia tri cho mang: '));
+    // while (a) {
+    //     array.push(a);
+    //     a = parseFloat(prompt('Nhap cac gia tri cho mang: '));
+    // }
+    for (let i = 0; i < array.length; i++) {
+        if (array[i]>=results) {
+            results = array[i];
+        }
+    }
+    alert(results);
+</script>

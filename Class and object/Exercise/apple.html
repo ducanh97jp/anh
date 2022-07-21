@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+        decrease() {
+            this.weight = this.weight - 1;
+        }
+        isEmpty() {
+            if (this.weight == 0) {
+                return true;
+            }
+            return false;
+        }
+        getWeight() {
+            return this.weight;
+        }
+
+    }
+    let apple = new Apple(10);
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        checkVolum() {
+            return apple.getWeight();
+        }
+        speak() {
+            console.log("Toi la " + this.name);
+        }
+        eatApple() {
+            if (apple.weight > 0) {
+                this.weight = this.weight + 1;
+                apple.decrease();
+            } else {
+                console.log(" An het tao roi");
+            }
+        }
+        getName() {
+            return this.name;
+        }
+        getWeight() {
+            return this.weight;
+        }
+    }
+    let eva = new Human("Eva", "Nu", 50);
+    let adam = new Human("Adam", "Nu", 70);
+    eva.speak();
+    adam.speak()
+    console.log(eva.checkVolum());
+    eva.eatApple();
+    adam.eatApple();
+    console.log(eva.checkVolum());
+    console.log(adam.checkVolum());
+    console.log(eva.getWeight());
+    console.log(adam.getWeight());
+</script>

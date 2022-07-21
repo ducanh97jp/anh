@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuyen doi nhiet do</title>
+</head>
+<body>
+    <h3>Temperature Converter</h3>
+    <p>Type a value in the Fahrenhei field to convert the value to Celcius:</p>
+    Fahrenhei <input id="temperature" type="number" 
+                    oninput="temperatureConverter(this.value)"
+                    onchange="temperatureConverter(this.value)">
+    <p id="celcius">Celcius:</p>
+</body>
+</html>
+<script>
+    function temperatureConverter(head) {
+        let result = (head - 32) / 1.8;
+        document.getElementById("celcius").innerHTML = "Celcius: " + result;
+    }
+</script>

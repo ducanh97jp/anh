@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        p {
+            text-align: right;
+            width: 5%;
+            height: 5px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tam giac</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let a ;
+    for (let i = 1;i<=5;i++) {
+        for ( let j = 1;j<=i;j++) {
+            a = "*";
+            document.write(a);
+        }
+        document.write("<br>");
+    }
+    document.write('<br>');
+    for (let i = 5;i>0;i--) {
+        
+        for ( let j = 1;j<=i;j++) {
+            a = "*";
+            document.write(a);
+        }
+        document.write("<br>");
+    }
+    document.write('<br>');
+    for (let i = 1;i<=5;i++) {
+        document.write('<p>');
+        for ( let j = 1;j<=i;j++) {
+            a = "*";
+            document.write(a);
+        }
+        document.write('</p>');
+    }
+    document.write('<br>');
+    for (let i = 5;i>0;i--) {
+        document.write('<p>');
+        for ( let j = 1;j<=i;j++) {
+            b = "*";
+            document.write(a);
+        }
+        document.write('</p>');
+    }
+</script>

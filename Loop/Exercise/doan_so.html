@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đoán số</title>
+</head>
+<body>
+    <h2>Game đoán số</h2>
+    <button onclick="game()">Chơi</button>
+</body>
+</html>
+<script>
+    function game() {debugger;
+        let min = parseInt(prompt('Nhập số bé nhất đươc chon: '));
+        let max = parseInt(prompt('Nhập số lớn nhất đươc chon: '));
+        let result = Math.floor(Math.random() * (max - min + 1)) + min;
+        for (let i = 1;i<=3;i++) { 
+            let value = parseInt(prompt("Nhập số bạn chọn: "));
+            if (result == value) {
+                alert('Chúc mừng bạn đoán đúng');
+                return;
+            } 
+        }
+        alert('Sai rồi!');
+    }
+
+</script>

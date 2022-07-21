@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            width: 30%;
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ca ro</title>
+</head>
+<body>
+    <h3>Caro Game Simple</h3>
+    <p id="carogame"></p>
+    <button onclick="changeValue()">Change Value</button>
+</body>
+</html>
+<script>
+    let b = document.getElementById("carogame");
+    let board = [];
+    let data = "";
+    for (let i = 0;i<10;i++) {
+        board[i] = new Array(".", ".", ".", ".", ".", ".", ".", ".", ".",".",);
+    }
+    for (let i = 0;i<10;i++) {
+        data += "<br><br>";
+        for ( let j = 0;j<10;j++) {
+            data += board[i][j] + '&nbsp;&nbsp;&nbsp;&nbsp;';
+        }
+    }
+    data += "<br><br>";
+    b. innerHTML = data;
+    let check_x = true;
+    function changeValue() {
+        let positionX = +prompt("X: ");
+        let positionY = +prompt("Y: ");
+        data = "";
+        if (check_x) {
+            board[positionX][positionY] = 'X';
+        } else {
+            board[positionX][positionY] = 'Y';
+        }
+        for (let i = 0;i<10;i++) {
+            data +="<br><br>";
+            for ( let j = 0;j<10;j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+        }
+    }
+    b.innerHTML = data;
+    check_x = !check_x
+    check_win(positionX, positionY, board[positionX][positionY])
+}
+const check_win =(x,y,value) => {
+    if (board[x][y+1] == value && board[x][y+2] == value && y<8 ||
+       board[x][y+1] == value && board[x][y-1] == value && y>=1 && y<9||
+        board[x][y-1] == value && board[x][y-2] == value && y>=2 && y<10) {
+        alert(value + " win");
+    } else if (board[x+1][y] == value && board[x+2][y] == value && x<8 ||
+              board[x+1][y] == value && board[x-1][y] == value && x>=1 && x <9||
+              board[x-1][y] == value && board[x-2][y] == value && x>=2 && x<10) {
+                alert(value + 'win');
+    } else if (board[x+1][y+1] == value && board[x+2][y+2] == value && y<8 && x<8||
+              board[x-1][y-1] == value && board[x+1][y+1] == value && y>=1 && y<9 && x>=1 && x<9||
+              board[x-1][y-1] == value && board[x-2][y-2] == value && y>=2 && y<10 && x>=2 && x<10) {
+        alert(value + " win");
+    } else if (board[x+1][y-1] == value && board[x+2][y-2] == value && y>=8 && x<8||
+               board[x-1][y+1] == value && board[x+1][y-1] == value && y>=1 && y<9 && x>=1 && x<9||
+               board[x-1][y+1] == value && board[x -2][y+2] == value && y<8 && x>=2) {
+        alert(value + " win");    
+    }
+}
+</script>

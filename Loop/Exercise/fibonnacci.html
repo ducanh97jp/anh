@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let n = parseInt(prompt('Enter the n '));
+    let a =1;
+    let b =1;
+    let c = 0;
+    for (let i = 1;i<=n;i++) {
+       if (i === 1) {
+           document.write(a + ',');
+           continue;
+       }
+       if (i == n) {
+        a = b + c ;
+        document.write(a);
+        break;
+       }
+        a = b + c;
+        c = b;
+        b = a;
+        document.write(a + ',');
+    }
+    
+</script>

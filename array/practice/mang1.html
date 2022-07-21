@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3><i>Sample Screen:</i></h3>
+    <input name="element" id="element">
+    <button onclick="add()">Add</button>
+    <button onclick="Display()">Display</button>
+
+    <div id="result"></div>
+</body>
+
+</html>
+<script>
+    let array = Array();debugger;
+    let x = 0;
+    function add() {
+        array[x] = document.getElementById("element").value;
+        alert("element: " + array[x] + " added at index " + x);
+        x++;
+        document.getElementById("element").value;
+    }
+    function Display() {
+        let e = "<hr>";
+        for (let i = 0; i < array.length; i++) {
+            e += "element" + i + " = " + array[i] + "<br>";
+
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+</script>
