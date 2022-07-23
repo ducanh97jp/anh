@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Type anthing alowly</h1>
+    <form name="add">
+        <textarea id="text" style="border: 1px solid blue; width: 300px; height: 200px;"></textarea>
+    </form>
+</body>
+
+</html>
+<script>
+
+    let arr = ["M", "y", " ", "n", "a", "m", "e", " ", "i", "s", " ", "Đ", "ứ", "c", " ", "A", "n", "h"];
+    let i = 0;
+
+    document.getElementById("text").innerHTML = "";
+    document.addEventListener("keydown", function (event) {
+        console.log(event);
+        if (event.isTrusted) {
+        document.getElementById("text").innerHTML += arr[i];
+        i++;
+        if (i == arr.length) {
+            i = 0;
+            document.getElementById("text").innerHTML = "";
+        }
+    }
+    })
+
+</script>
