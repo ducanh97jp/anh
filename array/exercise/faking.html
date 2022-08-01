@@ -25,13 +25,16 @@
 
     let arr = ["M", "y", " ", "n", "a", "m", "e", " ", "i", "s", " ", "Đ", "ứ", "c", " ", "A", "n", "h"];
     let i = 0;
+    let a = "";
 
     document.getElementById("text").innerHTML = "";
     document.addEventListener("keydown", function (event) {
         console.log(event);
         if (event.isTrusted) {
-        document.getElementById("text").innerHTML += arr[i];
+            a += arr[i];
+        document.getElementById("text").innerHTML = a;
         i++;
+        console.log(a);
         if (i == arr.length) {
             i = 0;
             document.getElementById("text").innerHTML = "";
